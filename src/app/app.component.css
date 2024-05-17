@@ -1,0 +1,15 @@
+.titulo {
+  text-align: center;
+  font-size: 2em;
+  padding: 20px;
+  background-color: #B0E0E6;
+  color: black;
+  position: relative; 
+}
+.titulo img {
+  position: absolute;
+  left: 1%;
+  top: 15%;
+  width: 50px;
+  height: 50px; 
+}

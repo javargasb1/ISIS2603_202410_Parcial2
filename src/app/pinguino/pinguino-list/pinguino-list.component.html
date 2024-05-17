@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Columna de la lista de series -->
+    <div class="col-6">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="h4"> # </th>
+            <th class="h4"> Nombre </th>
+            <th class = "h4"> Nombre Científico </th>
+            <th class="h4"> Alimentación </th>
+            <th class="h4"> Distribución mundial </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of pinguinos" (click)="OnSelected(c)">
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.scientific_name}}</td>
+            <td>{{c.feeding}}</td>
+            <td>{{c.global_distribution}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p> La especie con mayor distribución mundial es <strong> {{topDistribution}} </strong> con presencia en {{places}}</p>
+    </div>
+
+    <!-- Columna del detalle de la serie -->
+    <div class="col-6">
+      <div *ngIf="selected">
+        <app-pinguino-detail [pinguinoDetail]="selectedPinguino"></app-pinguino-detail>
+      </div>
+    </div>
+  </div>
+</div>
